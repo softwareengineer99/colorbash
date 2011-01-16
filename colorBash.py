@@ -97,21 +97,21 @@ class ColoredText:
 
     def setColor(self, color, part=None):
         if self.__isNotSet(color):
-        	return
+            return
         if self.__isColor(color):
             for s in self.__slices(part):
                 self.__addColor(s, color=color)
         else:
-        	raise ColorError('Color \'%s\' you can\'t use!' % color)
+            raise ColorError('Color \'%s\' you can\'t use!' % color)
 
     def setBackground(self, background, part=None):
         if self.__isNotSet(background):
-        	return
+            return
         if self.__isBackground(background):
             for s in self.__slices(part):
                 self.__addColor(s, background=background)
         else:
-        	raise ColorError('Background color \'%s\' you can\'t use' % background)
+            raise ColorError('Background color \'%s\' you can\'t use' % background)
 
     def setCurrent(self, color, background):
         self.setCurrentColor(color)
@@ -125,17 +125,17 @@ class ColoredText:
 
     def setCurrentBackground(self, background):
         if self.__isNotSet(background):
-        	return
+            return
         if self.__isBackground(background):
             self.__currentBackground = background
         else:
-        	raise ColorError( 'Background color \'%s\' you can\'t use' % background)
+            raise ColorError( 'Background color \'%s\' you can\'t use' % background)
 
     def __isNotSet(self, value):
         return not self.__isSet(value)
 
     def __isSet(self, value):
-    	return True if value else False
+        return True if value else False
 
     def __slices(self, part):
         if part is None:
@@ -192,7 +192,7 @@ class ColoredText:
         return sequence + self.__string[x]
 
     def __isDifferent(self, foo, bar):
-    	return foo != bar
+        return foo != bar
 
     def __createSequence(self, colors):
         color = colors[COLOR] or self.__currentColor
@@ -220,5 +220,5 @@ class ColoredText:
         })
 
 if __name__ == '__main__':
-	print ColoredText('Colored Text!', 'blue', part='^[^ ]*')
+    print ColoredText('Colored Text!', 'blue', part='^[^ ]*')
 

@@ -40,8 +40,8 @@ class ColoredTextTest(unittest.TestCase):
         self.assertEqual(self.coloredText.get(), '\033[1;33mHello\033[0m World')
     
     def testBackgrondByRegular(self):
-    	self.coloredText.setBackground('black', 'o')
-    	self.assertEqual(self.coloredText.get(), 'Hell\033[40mo\033[0m W\033[40mo\033[0mrld')
+        self.coloredText.setBackground('black', 'o')
+        self.assertEqual(self.coloredText.get(), 'Hell\033[40mo\033[0m W\033[40mo\033[0mrld')
 
     def testColorAndBackgroundBySlice(self):
         self.coloredText.setColor('dark cyan', slice(6, 11))
