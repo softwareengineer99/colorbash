@@ -1,16 +1,11 @@
 # -*- coding: utf-8 -*-
 
-# version 1.1
-# 16.1.2011
-# Michal Horejsek
-
 import re
 
 
 MAXINT = 2147483647
 COLOR = 'color'
 BGCOLOR = 'background'
-
 
 
 class ColorError(Exception):
@@ -21,9 +16,7 @@ class ColorError(Exception):
         return repr(self.value)
 
 
-
 class ColoredText:
-
     __string = ''
     __formater = {}
 
@@ -218,6 +211,7 @@ class ColoredText:
             COLOR: None,
             BGCOLOR: None,
         })
+
 
 if __name__ == '__main__':
     print ColoredText('Colored Text!', 'blue', part='^[^ ]*')

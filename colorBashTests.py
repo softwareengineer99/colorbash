@@ -1,14 +1,10 @@
-# coding: utf-8
-
-# version 1.0
-# 6.5.2010
-# Michal Horejsek
+# -*- coding: utf-8 -*-
 
 import unittest
 from colorBash import *
 
-class ColoredTextTest(unittest.TestCase):
 
+class ColoredTextTest(unittest.TestCase):
     def setUp(self):
         self.coloredText = ColoredText('Hello World')
 
@@ -81,6 +77,7 @@ class ColoredTextTest(unittest.TestCase):
 
     def testBadCurrentBackground(self):
         self.assertRaises(ColorError, self.coloredText.setCurrentBackground, 'white')
+
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(ColoredTextTest)
