@@ -8,7 +8,7 @@ setup(
     name = 'colorBash',
     packages = ['colorBash'],
     version = version,
-    url = 'https://github.com/pxjava/colorBash',
+    url = 'https://github.com/horejsek/colorBash',
     description = 'Python module.',
     author = 'Michal Horejsek',
     author_email = 'horejsekmichal@gmail.com',
