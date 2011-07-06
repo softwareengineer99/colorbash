@@ -5,10 +5,10 @@ from distutils.core import setup
 version = '1.2'
 
 setup(
-    name = 'colorBash',
-    packages = ['colorBash'],
+    name = 'colorbash',
+    packages = ['colorbash'],
     version = version,
-    url = 'https://github.com/horejsek/colorBash',
+    url = 'https://github.com/horejsek/colorbash',
     description = 'Python module.',
     author = 'Michal Horejsek',
     author_email = 'horejsekmichal@gmail.com',

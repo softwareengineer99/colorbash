@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from colorBash import *
+from colorbash import *
 
 
 class ColoredTextTest(unittest.TestCase):
