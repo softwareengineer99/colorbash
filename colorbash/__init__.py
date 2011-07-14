@@ -143,14 +143,14 @@ class ColoredText:
         return slice(0, MAXINT)
 
     def __isColor(self, color):
-        return self.__colors.has_key(color)
+        return color in self.__colors
 
     def __isBackground(self, color):
-        return self.__backgroundColors.has_key(color)
+        return color in self.__backgroundColors
 
     def __addColor(self, key, color=None, background=None):
-        start = max(0, key.__getattribute__('start'))
-        stop = min(len(self.__string), key.__getattribute__('stop'))
+        start = max(0, key.__getattribute__('start') or 0)
+        stop = min(len(self.__string), key.__getattribute__('stop') or 0)
         for x in range(start, stop):
             self.__addToFormater(x, color, background)
 
@@ -169,7 +169,7 @@ class ColoredText:
             COLOR: None,
             BGCOLOR: None,
         }
-        for x, colors in self.__formater.iteritems():
+        for x, colors in self.__formater.items():
             string += self.__character(x, colors, previous)
             previous = colors
         if self.__isEndSet():
@@ -214,5 +214,5 @@ class ColoredText:
 
 
 if __name__ == '__main__':
-    print ColoredText('Colored Text!', 'blue', part='^[^ ]*')
+    print(ColoredText('Colored Text!', 'blue', part='^[^ ]*'))
 
