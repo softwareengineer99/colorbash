@@ -9,7 +9,7 @@ setup(
     packages = ['colorbash'],
     version = version,
     url = 'https://github.com/horejsek/colorbash',
-    description = 'Python module.',
+    description = 'Python library for color the output of program in Bash.',
     author = 'Michal Horejsek',
     author_email = 'horejsekmichal@gmail.com',
     license = 'GNU General Public License (GPL)',
